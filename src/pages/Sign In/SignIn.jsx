@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
+  const { signIn } = useContext(AuthContext);
   return (
     <div>
       <div

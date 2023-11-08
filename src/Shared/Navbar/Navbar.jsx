@@ -1,7 +1,20 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("Logged Out ");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const NavLists = (
     <>
       <div className="lg:flex gap-2 ">
@@ -87,7 +100,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          {/* <div>
+          <div>
             {user ? (
               <>
                 <span>{user.displayName}</span>
@@ -98,10 +111,10 @@ const Navbar = () => {
               </>
             ) : (
               <Link to="/SignIn">
-                <button className="w-24">Sign In</button>
+                <button className="w-24"></button>
               </Link>
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </>
