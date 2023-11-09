@@ -40,7 +40,7 @@ const Navbar = () => {
             <NavLink to="/ManageMyFoods">Manage My Foods</NavLink>
           </li>
         </ul>
-        <ul className="mr-40">
+        <ul className="mr-39">
           <li>
             <NavLink to="/MyFoodRequest">My Food Request</NavLink>
           </li>
