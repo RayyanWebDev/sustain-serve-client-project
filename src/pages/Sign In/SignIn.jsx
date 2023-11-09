@@ -4,6 +4,22 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const SignIn = () => {
   const { signIn } = useContext(AuthContext);
+
+  const handleGoogle = () => {};
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+    signIn(email, password)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div>
       <div
@@ -14,7 +30,7 @@ const SignIn = () => {
         }}
       >
         <div className="card flex-shrink-0 w-full max-w-sm bg-slate-400 backdrop-filter  bg-opacity-20  shadow-xl ">
-          <form onSubmit="" className="card-body">
+          <form onSubmit={handleSignIn} className="card-body">
             <h3 className="text-3xl font-bold text-white mb-6 mt-6">Sign In</h3>
             <div className="form-control">
               <input

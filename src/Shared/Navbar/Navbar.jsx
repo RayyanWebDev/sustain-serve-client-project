@@ -26,13 +26,13 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <NavLink to="/movies">Available Foods</NavLink>
+            <NavLink to="/available">Available Foods</NavLink>
           </li>
         </ul>
 
         <ul>
           <li>
-            <NavLink to="/TvShows">Add Food</NavLink>
+            <NavLink to="/addFood">Add Food</NavLink>
           </li>
         </ul>
         <ul>
@@ -80,24 +80,19 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
-                  <a>{NavLists} </a>
-                </li>
+                <li>{NavLists}</li>
               </ul>
             </div>
-            <a className="">
-              <img
-                className="w-20"
-                src="https://i.ibb.co/VQLh61Y/download-image-1699230679889.png"
-                alt=""
-              />
-            </a>
+
+            <img
+              className="w-20"
+              src="https://i.ibb.co/VQLh61Y/download-image-1699230679889.png"
+              alt=""
+            />
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-              <li>
-                <a>{NavLists}</a>
-              </li>
+              <li>{NavLists}</li>
             </ul>
           </div>
           <div>

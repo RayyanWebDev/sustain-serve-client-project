@@ -1,12 +1,18 @@
 import React from "react";
 import Slider from "../Slider/Slider";
+import WhatWeDo from "../WhatWeDo/WhatWeDo";
+import OurMotto from "../OurMotto/OurMotto";
+import Foods from "../Foods/Foods";
 
 const Home = () => {
   return (
     <>
-      <div className="text-red-600">
+      <div className="">
         <Slider></Slider>
-        Home
+
+        <WhatWeDo></WhatWeDo>
+        <Foods></Foods>
+        <OurMotto></OurMotto>
       </div>
     </>
   );
